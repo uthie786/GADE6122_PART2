@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Uthmaan\\Desktop\\Gade6122_Part1_corrected\\Gade6122_Part1_corrected\\Gade6122_Part1_corrected.csproj": {}
+    "C:\\Users\\Uthmaan\\Desktop\\Github\\GADE6122_PART2\\Gade6122_Part1_corrected\\Gade6122_Part1_corrected\\Gade6122_Part1_corrected.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Uthmaan\\Desktop\\Gade6122_Part1_corrected\\Gade6122_Part1_corrected\\Gade6122_Part1_corrected.csproj": {
+    "C:\\Users\\Uthmaan\\Desktop\\Github\\GADE6122_PART2\\Gade6122_Part1_corrected\\Gade6122_Part1_corrected\\Gade6122_Part1_corrected.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Uthmaan\\Desktop\\Gade6122_Part1_corrected\\Gade6122_Part1_corrected\\Gade6122_Part1_corrected.csproj",
+        "projectUniqueName": "C:\\Users\\Uthmaan\\Desktop\\Github\\GADE6122_PART2\\Gade6122_Part1_corrected\\Gade6122_Part1_corrected\\Gade6122_Part1_corrected.csproj",
         "projectName": "Gade6122_Part1_corrected",
-        "projectPath": "C:\\Users\\Uthmaan\\Desktop\\Gade6122_Part1_corrected\\Gade6122_Part1_corrected\\Gade6122_Part1_corrected.csproj",
+        "projectPath": "C:\\Users\\Uthmaan\\Desktop\\Github\\GADE6122_PART2\\Gade6122_Part1_corrected\\Gade6122_Part1_corrected\\Gade6122_Part1_corrected.csproj",
         "packagesPath": "C:\\Users\\Uthmaan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Uthmaan\\Desktop\\Gade6122_Part1_corrected\\Gade6122_Part1_corrected\\obj\\",
+        "outputPath": "C:\\Users\\Uthmaan\\Desktop\\Github\\GADE6122_PART2\\Gade6122_Part1_corrected\\Gade6122_Part1_corrected\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Uthmaan\\AppData\\Roaming\\NuGet\\NuGet.Config",
