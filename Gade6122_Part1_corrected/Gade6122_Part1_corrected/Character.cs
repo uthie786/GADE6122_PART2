@@ -18,6 +18,7 @@ namespace Gade6122_Part1_corrected
         protected int hp;
         protected int maxHp;
         protected int damage;
+        private int purse;
         protected Tile[] vision;
 
         public int HP { get { return hp; } }
@@ -28,6 +29,12 @@ namespace Gade6122_Part1_corrected
         public bool IsDead
         {
             get { return hp <= 0; }
+        }
+       public int Purse
+        {
+            get { return purse; }
+            set { purse = value; }
+
         }
 
         public Character(int x, int y) : base(x, y)
@@ -83,6 +90,15 @@ namespace Gade6122_Part1_corrected
             int xDist = Math.Abs(target.X - x);
             int yDist = Math.Abs(target.Y - y);
             return xDist + yDist;
+        }
+
+        public void PickUp(Item item)
+        {
+            if (item.GetType() == typeof(Gold))
+            {
+                int goldAmount = ((Gold)item).GoldAmount;
+                Purse += goldAmount;
+            }
         }
 
         

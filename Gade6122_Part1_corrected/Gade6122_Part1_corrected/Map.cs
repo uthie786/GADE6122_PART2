@@ -9,6 +9,7 @@ namespace Gade6122_Part1_corrected
         private Tile[,] map;
         private Hero hero;
         private Enemy[] enemies;
+        public Item[] items;
         private int width;
         private int height;
         private Random random;
@@ -17,7 +18,7 @@ namespace Gade6122_Part1_corrected
             get { return hero; }
         }
 
-        public Map(int minWidth, int maxWidth, int minHeight, int maxHeight, int numEnemies)
+        public Map(int minWidth, int maxWidth, int minHeight, int maxHeight, int numEnemies, int goldAmount)
         {
             random = new Random();
 
@@ -26,12 +27,16 @@ namespace Gade6122_Part1_corrected
             map = new Tile[width, height];
             InitialiseMap();
             enemies = new Enemy[numEnemies];
+            items = new Item[goldAmount];
 
             hero = (Hero)Create(TileType.Hero);
             for (int i = 0; i < enemies.Length; i++)
             {
-                enemies[i] = (Enemy)Create(TileType.Enemy);
-            
+              enemies[i] = (Enemy)Create(TileType.Enemy);           
+            }
+            for (int i = 0; i < items.Length; i++)
+            {
+                items[i] = (Item)Create(TileType.Gold);
             }
             UpdateVision();
          }
@@ -72,12 +77,20 @@ namespace Gade6122_Part1_corrected
             {
                 map[tileX, tileY] = new Hero(tileX, tileY, 10);
             }
+            if (type == TileType.Gold)
+            {
+                map[tileX, tileY] = new Gold(tileX, tileY);
+            }
             else if (type == TileType.Enemy)
             {
-                int enemyType = random.Next(0);
+                int enemyType = random.Next(2);
                 if (enemyType == 0)
                 {
                     map[tileX, tileY] = new SwampCreature(tileX, tileY);
+                }
+                if (enemyType == 1)
+                {
+                    map[tileX, tileY] = new Mage(tileX, tileY);
                 }
             }
             return map[tileX, tileY];
@@ -120,14 +133,26 @@ namespace Gade6122_Part1_corrected
                     {
                         s += "H";
                     }
-                    else if (tile is Enemy)
+                    else if (tile is SwampCreature)
                     {
-                        Enemy enemy = (Enemy)tile;
-                        if (enemy.IsDead)
+                        
+                        if (((Enemy)tile).IsDead)
+                        {
+                            s += '†';                           
+                        }                       
+                        else s += "S";
+                    }
+                    else if (tile is Mage)
+                    {
+                        if (((Enemy)tile).IsDead)
                         {
                             s += '†';
                         }
-                        s += "S";
+                        else s += "M";
+                    }
+                    else if (tile is Gold)
+                    {
+                        s += "G";
                     }
 
                 }

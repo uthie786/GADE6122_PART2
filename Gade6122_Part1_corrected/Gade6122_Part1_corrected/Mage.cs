@@ -12,7 +12,7 @@ namespace Gade6122_Part1_corrected
         }
         public override Movement ReturnMove(Movement move) //not too sure about this
         {
-            return 0;
+            return Movement.NoMovemnt;
         }
         public override bool CheckRange(Character target)
         {

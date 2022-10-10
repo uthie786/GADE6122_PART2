@@ -11,7 +11,18 @@ namespace Gade6122_Part1_corrected
         
         public Gold(int x,int y) : base(x, y)
         {
-            int rng = random.Next(0, 6);
+            GoldAmount = random.Next(0, 6);
+        }
+
+        public int GoldAmount
+        {
+            get { return goldAmount; }
+            set { goldAmount = value; }
+        }
+
+        public override string ToString()
+        {
+            throw new NotImplementedException();
         }
     }
 }

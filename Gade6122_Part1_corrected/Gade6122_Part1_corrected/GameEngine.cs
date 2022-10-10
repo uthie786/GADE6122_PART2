@@ -18,7 +18,7 @@ namespace Gade6122_Part1_corrected
         }
         public GameEngine()
         {
-            map = new Map(10, 20, 10, 20, 8);
+            map = new Map(10, 20, 10, 20, 8, 4);
         }
         public bool MovePlayer(Movement direction)
         {
