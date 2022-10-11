@@ -32,8 +32,8 @@ namespace Gade6122_Part1_corrected
             return $"Player stats: \n" +
                 $"HP: {hp}/{maxHp}\n" +
                 $"Damage: {damage} \n" +
-                $"[{x}, {y}]";
-                    
+                $"Total Gold: {Purse}\n" +
+                $"[{x}, {y}]";                   
         }
     }
 }

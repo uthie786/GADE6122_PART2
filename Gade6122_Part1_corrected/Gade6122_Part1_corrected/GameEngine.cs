@@ -31,6 +31,11 @@ namespace Gade6122_Part1_corrected
             {
                 return false;
             }
+            Item item = map.GetItemAtPoisition(map.Hero.X, map.Hero.Y);
+            if (item is Gold)
+            {
+                map.Hero.PickUp(item);
+            }
 
             map.Hero.Move(validMove);
             map.UpdateMap();
@@ -49,7 +54,7 @@ namespace Gade6122_Part1_corrected
                 map.Hero.Attack(enemy);
                 return "Hero attacked: " + enemy.ToString();
             }
-            return "Attack Failed, no enemy in this direction";
+            return "Attack Failed, no enemy in this direction"; 
         }
     }
 }

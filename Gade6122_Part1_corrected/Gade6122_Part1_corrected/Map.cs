@@ -158,7 +158,37 @@ namespace Gade6122_Part1_corrected
                 }
                 s += "\n";
             }
-            return s;
+            return s;            
+        }
+
+        public Item GetItemAtPoisition(int x, int y)
+        {
+            for (int i = 0; i < items.Length; i++)
+            {
+                if (items[i].X == x && items[i].Y == y)
+                {
+                    Item selectedItem = items[i];
+                    items[i] = null;
+                    return selectedItem;
+                }
+            }
+
+            return null;
+
+        }
+
+        public void MoveEnemies()
+        {
+            for (int i = 0; i < this.enemies.Length; i++)
+            {
+                if (enemies[i] is SwampCreature)
+                {
+                    int x = enemies[i].X + random.Next(-1, 1);
+                    int y = enemies[i].Y + random.Next(-1, 1);
+                    enemies[i] = new SwampCreature(x, y);
+                }
+                
+            }
         }
     }
 }
