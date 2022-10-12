@@ -58,6 +58,10 @@ namespace Gade6122_Part1_corrected
             {
                 map[enemy.X, enemy.Y] = enemy;
             }
+            foreach (Item item in items)
+            {
+                map[item.X, item.Y] = item;
+            }
             //place hero last so its not overwritten
             map[hero.X, hero.Y] = hero;
             UpdateVision();

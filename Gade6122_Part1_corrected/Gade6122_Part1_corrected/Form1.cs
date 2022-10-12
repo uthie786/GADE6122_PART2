@@ -11,10 +11,10 @@ using System.Diagnostics;
 
 namespace Gade6122_Part1_corrected
 {
-    public partial class Form1 : Form
+    public partial class frm1 : Form
     {
         GameEngine gameEngine;
-        public Form1()
+        public frm1()
         {
             InitializeComponent();
             gameEngine = new GameEngine();
@@ -63,7 +63,7 @@ namespace Gade6122_Part1_corrected
             {
                 attackInfo = gameEngine.PlayerAttack(Movement.Up);
             }
-            else if (keyCode == Keys.J)
+            else if (keyCode == Keys.K)
             {
                 attackInfo = gameEngine.PlayerAttack(Movement.Down);
             }

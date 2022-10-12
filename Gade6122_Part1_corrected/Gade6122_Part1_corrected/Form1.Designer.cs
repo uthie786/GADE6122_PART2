@@ -1,7 +1,7 @@
 ﻿
 namespace Gade6122_Part1_corrected
 {
-    partial class Form1
+    partial class frm1
     {
         /// <summary>
         ///  Required designer variable.
@@ -37,6 +37,8 @@ namespace Gade6122_Part1_corrected
             // lblMap
             // 
             this.lblMap.AutoSize = true;
+            this.lblMap.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblMap.ForeColor = System.Drawing.Color.Red;
             this.lblMap.Location = new System.Drawing.Point(95, 60);
             this.lblMap.Name = "lblMap";
             this.lblMap.Size = new System.Drawing.Size(112, 15);
@@ -47,6 +49,8 @@ namespace Gade6122_Part1_corrected
             // lblAttackInfo
             // 
             this.lblAttackInfo.AutoSize = true;
+            this.lblAttackInfo.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblAttackInfo.ForeColor = System.Drawing.Color.Red;
             this.lblAttackInfo.Location = new System.Drawing.Point(567, 138);
             this.lblAttackInfo.Name = "lblAttackInfo";
             this.lblAttackInfo.Size = new System.Drawing.Size(168, 15);
@@ -57,6 +61,8 @@ namespace Gade6122_Part1_corrected
             // lblHeroStats
             // 
             this.lblHeroStats.AutoSize = true;
+            this.lblHeroStats.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblHeroStats.ForeColor = System.Drawing.Color.Red;
             this.lblHeroStats.Location = new System.Drawing.Point(567, 42);
             this.lblHeroStats.Name = "lblHeroStats";
             this.lblHeroStats.Size = new System.Drawing.Size(147, 15);
@@ -64,17 +70,18 @@ namespace Gade6122_Part1_corrected
             this.lblHeroStats.Text = "(hero stats go here)";
             this.lblHeroStats.Click += new System.EventHandler(this.lblHeroStats_Click);
             // 
-            // Form1
+            // frm1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.lblHeroStats);
             this.Controls.Add(this.lblAttackInfo);
             this.Controls.Add(this.lblMap);
             this.Font = new System.Drawing.Font("Monospac821 BT", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "frm1";
+            this.Text = "Swamp Game";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             this.ResumeLayout(false);
             this.PerformLayout();
