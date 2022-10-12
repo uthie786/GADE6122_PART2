@@ -40,18 +40,22 @@ namespace Gade6122_Part1_corrected
             if (keyCode == Keys.W)
             {
                 gameEngine.MovePlayer(Movement.Up);
+                gameEngine.map.MoveEnemies();
             }
             else if (keyCode == Keys.S)
             {
                 gameEngine.MovePlayer(Movement.Down);
+                gameEngine.map.MoveEnemies();
             }
             else if (keyCode == Keys.D)
             {
                 gameEngine.MovePlayer(Movement.Right);
+                gameEngine.map.MoveEnemies();
             }
             else if (keyCode == Keys.A)
             {
                 gameEngine.MovePlayer(Movement.Left);
+                gameEngine.map.MoveEnemies();
             }
             
         }

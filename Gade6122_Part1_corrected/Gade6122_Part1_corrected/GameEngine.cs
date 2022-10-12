@@ -6,7 +6,8 @@ namespace Gade6122_Part1_corrected
 {
     public class GameEngine
     {
-        Map map;
+        public Map map;
+        public SwampCreature swampCreature;
         
         public string Display
         {
@@ -56,5 +57,11 @@ namespace Gade6122_Part1_corrected
             }
             return "Attack Failed, no enemy in this direction"; 
         }
+        public void EnemyAttacks()
+        {
+            
+        }
+
+
     }
 }

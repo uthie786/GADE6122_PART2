@@ -184,13 +184,39 @@ namespace Gade6122_Part1_corrected
         public void MoveEnemies()
         {
             for (int i = 0; i < this.enemies.Length; i++)
-            {
+            {               
                 if (enemies[i] is SwampCreature)
                 {
-                    int x = enemies[i].X + random.Next(-1, 1);
-                    int y = enemies[i].Y + random.Next(-1, 1);
-                    enemies[i] = new SwampCreature(x, y);
+                    enemies[i].UpdateVision(map);                   
+                   
+                    Movement direction = (enemies[i] as SwampCreature).ReturnMove();
+
+                    if (direction == Movement.NoMovemnt)
+                    {
+                        return;
+                    }
+                    if (direction == Movement.Up)
+                    {
+                        enemies[i] = new SwampCreature(enemies[i].X, enemies[i].Y - 1);
+                    }
+                    if (direction == Movement.Down)
+                    {
+                        enemies[i] = new SwampCreature(enemies[i].X, enemies[i].Y + 1);
+                    }
+                    if (direction == Movement.Left)
+                    {
+                        enemies[i] = new SwampCreature(enemies[i].X-1, enemies[i].Y);
+                    }
+                    if (direction == Movement.Right)
+                    {
+                        enemies[i] = new SwampCreature(enemies[i].X + 1, enemies[i].Y);
+                    }
+
+
+                   
+
                 }
+
                 
             }
         }
