@@ -41,21 +41,25 @@ namespace Gade6122_Part1_corrected
             {
                 gameEngine.MovePlayer(Movement.Up);
                 gameEngine.map.MoveEnemies();
+                gameEngine.EnemyAttacks();
             }
             else if (keyCode == Keys.S)
             {
                 gameEngine.MovePlayer(Movement.Down);
                 gameEngine.map.MoveEnemies();
+                gameEngine.EnemyAttacks();
             }
             else if (keyCode == Keys.D)
             {
                 gameEngine.MovePlayer(Movement.Right);
                 gameEngine.map.MoveEnemies();
+                gameEngine.EnemyAttacks();
             }
             else if (keyCode == Keys.A)
             {
                 gameEngine.MovePlayer(Movement.Left);
                 gameEngine.map.MoveEnemies();
+                gameEngine.EnemyAttacks();
             }
             
         }
@@ -66,18 +70,22 @@ namespace Gade6122_Part1_corrected
             if (keyCode == Keys.I)
             {
                 attackInfo = gameEngine.PlayerAttack(Movement.Up);
+                gameEngine.EnemyAttacks();
             }
             else if (keyCode == Keys.K)
             {
                 attackInfo = gameEngine.PlayerAttack(Movement.Down);
+                gameEngine.EnemyAttacks();
             }
             else if (keyCode == Keys.L)
             {
                 attackInfo = gameEngine.PlayerAttack(Movement.Right);
+                gameEngine.EnemyAttacks();
             }
             else if (keyCode == Keys.J)
             {
                 attackInfo = gameEngine.PlayerAttack(Movement.Left);
+                gameEngine.EnemyAttacks();
             }
             if (attackInfo != "")
             {

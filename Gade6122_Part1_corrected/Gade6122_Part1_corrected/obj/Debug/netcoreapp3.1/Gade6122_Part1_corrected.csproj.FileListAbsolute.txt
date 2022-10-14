@@ -37,7 +37,6 @@ C:\Users\Uthmaan\Desktop\Github\GADE6122_PART2\Gade6122_Part1_corrected\Gade6122
 C:\Users\Uthmaan\Desktop\Github\GADE6122_PART2\Gade6122_Part1_corrected\Gade6122_Part1_corrected\bin\Debug\netcoreapp3.1\Gade6122_Part1_corrected.dll
 C:\Users\Uthmaan\Desktop\Github\GADE6122_PART2\Gade6122_Part1_corrected\Gade6122_Part1_corrected\bin\Debug\netcoreapp3.1\Gade6122_Part1_corrected.pdb
 C:\Users\Uthmaan\Desktop\Github\GADE6122_PART2\Gade6122_Part1_corrected\Gade6122_Part1_corrected\obj\Debug\netcoreapp3.1\Gade6122_Part1_corrected.csproj.AssemblyReference.cache
-C:\Users\Uthmaan\Desktop\Github\GADE6122_PART2\Gade6122_Part1_corrected\Gade6122_Part1_corrected\obj\Debug\netcoreapp3.1\Gade6122_Part1_corrected.Form1.resources
 C:\Users\Uthmaan\Desktop\Github\GADE6122_PART2\Gade6122_Part1_corrected\Gade6122_Part1_corrected\obj\Debug\netcoreapp3.1\Gade6122_Part1_corrected.csproj.GenerateResource.cache
 C:\Users\Uthmaan\Desktop\Github\GADE6122_PART2\Gade6122_Part1_corrected\Gade6122_Part1_corrected\obj\Debug\netcoreapp3.1\Gade6122_Part1_corrected.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Uthmaan\Desktop\Github\GADE6122_PART2\Gade6122_Part1_corrected\Gade6122_Part1_corrected\obj\Debug\netcoreapp3.1\Gade6122_Part1_corrected.AssemblyInfoInputs.cache
@@ -62,3 +61,4 @@ C:\Users\kylel\OneDrive\Desktop\GitHub\Part1_Assignment_GADE6122\Part1_Assignmen
 C:\Users\kylel\OneDrive\Desktop\GitHub\Part1_Assignment_GADE6122\Part1_Assignment_GADE6122\GADE6122_PART2\Gade6122_Part1_corrected\Gade6122_Part1_corrected\bin\Debug\netcoreapp3.1\Gade6122_Part1_corrected.pdb
 C:\Users\kylel\OneDrive\Desktop\GitHub\Part1_Assignment_GADE6122\Part1_Assignment_GADE6122\GADE6122_PART2\Gade6122_Part1_corrected\Gade6122_Part1_corrected\obj\Debug\netcoreapp3.1\Gade6122_Part1_corrected.genruntimeconfig.cache
 C:\Users\kylel\OneDrive\Desktop\GitHub\Part1_Assignment_GADE6122\Part1_Assignment_GADE6122\GADE6122_PART2\Gade6122_Part1_corrected\Gade6122_Part1_corrected\obj\Debug\netcoreapp3.1\Gade6122_Part1_corrected.frm1.resources
+C:\Users\Uthmaan\Desktop\Github\GADE6122_PART2\Gade6122_Part1_corrected\Gade6122_Part1_corrected\obj\Debug\netcoreapp3.1\Gade6122_Part1_corrected.frm1.resources

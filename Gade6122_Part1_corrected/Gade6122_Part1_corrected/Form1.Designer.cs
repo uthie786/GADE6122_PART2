@@ -38,10 +38,11 @@ namespace Gade6122_Part1_corrected
             // 
             this.lblMap.AutoSize = true;
             this.lblMap.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblMap.Font = new System.Drawing.Font("Courier New", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblMap.ForeColor = System.Drawing.Color.Red;
             this.lblMap.Location = new System.Drawing.Point(95, 60);
             this.lblMap.Name = "lblMap";
-            this.lblMap.Size = new System.Drawing.Size(112, 15);
+            this.lblMap.Size = new System.Drawing.Size(175, 21);
             this.lblMap.TabIndex = 0;
             this.lblMap.Text = "(map goes here)";
             this.lblMap.Click += new System.EventHandler(this.lblMap_Click);
@@ -53,7 +54,7 @@ namespace Gade6122_Part1_corrected
             this.lblAttackInfo.ForeColor = System.Drawing.Color.Red;
             this.lblAttackInfo.Location = new System.Drawing.Point(567, 138);
             this.lblAttackInfo.Name = "lblAttackInfo";
-            this.lblAttackInfo.Size = new System.Drawing.Size(168, 15);
+            this.lblAttackInfo.Size = new System.Drawing.Size(128, 15);
             this.lblAttackInfo.TabIndex = 1;
             this.lblAttackInfo.Text = "(attack info goes here)";
             this.lblAttackInfo.Click += new System.EventHandler(this.lblAttackInfo_Click);
@@ -65,7 +66,7 @@ namespace Gade6122_Part1_corrected
             this.lblHeroStats.ForeColor = System.Drawing.Color.Red;
             this.lblHeroStats.Location = new System.Drawing.Point(567, 42);
             this.lblHeroStats.Name = "lblHeroStats";
-            this.lblHeroStats.Size = new System.Drawing.Size(147, 15);
+            this.lblHeroStats.Size = new System.Drawing.Size(113, 15);
             this.lblHeroStats.TabIndex = 2;
             this.lblHeroStats.Text = "(hero stats go here)";
             this.lblHeroStats.Click += new System.EventHandler(this.lblHeroStats_Click);
@@ -79,7 +80,7 @@ namespace Gade6122_Part1_corrected
             this.Controls.Add(this.lblHeroStats);
             this.Controls.Add(this.lblAttackInfo);
             this.Controls.Add(this.lblMap);
-            this.Font = new System.Drawing.Font("Monospac821 BT", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Name = "frm1";
             this.Text = "Swamp Game";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);

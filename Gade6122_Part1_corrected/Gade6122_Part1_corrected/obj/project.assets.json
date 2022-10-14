@@ -8,28 +8,20 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\kylel\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\Uthmaan\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\kylel\\OneDrive\\Desktop\\GitHub\\Part1_Assignment_GADE6122\\Part1_Assignment_GADE6122\\GADE6122_PART2\\Gade6122_Part1_corrected\\Gade6122_Part1_corrected\\Gade6122_Part1_corrected.csproj",
+      "projectUniqueName": "C:\\Users\\Uthmaan\\Desktop\\Github\\GADE6122_PART2\\Gade6122_Part1_corrected\\Gade6122_Part1_corrected\\Gade6122_Part1_corrected.csproj",
       "projectName": "Gade6122_Part1_corrected",
-      "projectPath": "C:\\Users\\kylel\\OneDrive\\Desktop\\GitHub\\Part1_Assignment_GADE6122\\Part1_Assignment_GADE6122\\GADE6122_PART2\\Gade6122_Part1_corrected\\Gade6122_Part1_corrected\\Gade6122_Part1_corrected.csproj",
-      "packagesPath": "C:\\Users\\kylel\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\kylel\\OneDrive\\Desktop\\GitHub\\Part1_Assignment_GADE6122\\Part1_Assignment_GADE6122\\GADE6122_PART2\\Gade6122_Part1_corrected\\Gade6122_Part1_corrected\\obj\\",
+      "projectPath": "C:\\Users\\Uthmaan\\Desktop\\Github\\GADE6122_PART2\\Gade6122_Part1_corrected\\Gade6122_Part1_corrected\\Gade6122_Part1_corrected.csproj",
+      "packagesPath": "C:\\Users\\Uthmaan\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Uthmaan\\Desktop\\Github\\GADE6122_PART2\\Gade6122_Part1_corrected\\Gade6122_Part1_corrected\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
-      ],
       "configFilePaths": [
-        "C:\\Users\\kylel\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\Uthmaan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
@@ -71,7 +63,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
       }
     }
   }

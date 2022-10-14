@@ -39,7 +39,7 @@ namespace Gade6122_Part1_corrected
 
         public Character(int x, int y) : base(x, y)
         {
-            vision = new Tile[4];
+            vision = new Tile[8];
         }
         public virtual void Attack(Character target)
         {
@@ -79,6 +79,14 @@ namespace Gade6122_Part1_corrected
             vision[2] = y + 1 < map.GetLength(1) ?  map[x , y+ 1] : null;
             //left
             vision[3] = x - 1 >= 0 ? map[x - 1, y] : null;
+            //up + left
+            vision[4] = y - 1 >= 0 && x - 1 >= 0 ? map[x - 1, y - 1] : null;
+            //up + right
+            vision[5] = y - 1 >= 0 && x < map.GetLength(0) ? map[x + 1, y - 1] : null;
+            //down + left 
+            vision[6] = y + 1 < map.GetLength(1) && x-1>= 0 ? map[x - 1, y + 1] : null;
+            //down + right 
+            vision[7] = y + 1 < map.GetLength(1) && x < map.GetLength(0) ? map[x + 1, y + 1] : null;
         }
 
         public abstract Movement ReturnMove(Movement move = Movement.NoMovemnt);

@@ -17,7 +17,10 @@ namespace Gade6122_Part1_corrected
         { 
             get { return hero; }
         }
-
+        public Enemy[] Enemy
+        {
+            get { return enemies; }
+        }
         public Map(int minWidth, int maxWidth, int minHeight, int maxHeight, int numEnemies, int goldAmount)
         {
             random = new Random();
@@ -79,7 +82,7 @@ namespace Gade6122_Part1_corrected
             }
             if(type == TileType.Hero)
             {
-                map[tileX, tileY] = new Hero(tileX, tileY, 10);
+                map[tileX, tileY] = new Hero(tileX, tileY, 100);
             }
             if (type == TileType.Gold)
             {
@@ -185,31 +188,32 @@ namespace Gade6122_Part1_corrected
         {
             for (int i = 0; i < this.enemies.Length; i++)
             {               
-                if (enemies[i] is SwampCreature)
+                if (enemies[i] is SwampCreature && enemies[i].IsDead == false)
                 {
+
                     enemies[i].UpdateVision(map);                   
                    
                     Movement direction = (enemies[i] as SwampCreature).ReturnMove();
-
+                    Tile tile = enemies[i];
                     if (direction == Movement.NoMovemnt)
                     {
                         return;
                     }
                     if (direction == Movement.Up)
                     {
-                        enemies[i] = new SwampCreature(enemies[i].X, enemies[i].Y - 1);
+                        enemies[i].Move((Movement)Movement.Up);
                     }
                     if (direction == Movement.Down)
                     {
-                        enemies[i] = new SwampCreature(enemies[i].X, enemies[i].Y + 1);
+                        enemies[i].Move((Movement)Movement.Down);
                     }
                     if (direction == Movement.Left)
                     {
-                        enemies[i] = new SwampCreature(enemies[i].X-1, enemies[i].Y);
+                        enemies[i].Move((Movement)Movement.Left);
                     }
                     if (direction == Movement.Right)
                     {
-                        enemies[i] = new SwampCreature(enemies[i].X + 1, enemies[i].Y);
+                       enemies[i].Move((Movement)Movement.Right);
                     }
 
 

@@ -53,12 +53,42 @@ namespace Gade6122_Part1_corrected
             {
                 Enemy enemy = (Enemy)tile;
                 map.Hero.Attack(enemy);
+               
                 return "Hero attacked: " + enemy.ToString();
             }
             return "Attack Failed, no enemy in this direction"; 
         }
         public void EnemyAttacks()
         {
+            for (int i = 0; i < map.Enemy.Length; i++)
+            {
+                if (map.Enemy[i] is SwampCreature && map.Enemy[i].IsDead == false)
+                {
+                    for (int x = 0; x < 4; x++)
+                    {
+                        Tile tile = map.Enemy[i].Vision[x];
+                        if (tile is Hero)
+                        {
+                            Hero hero = (Hero)tile;
+                            map.Enemy[i].Attack(hero);
+                        }
+                    }
+                }
+                else if (map.Enemy[i] is Mage && map.Enemy[i].IsDead == false)
+                {
+                    for (int x = 0; x < 8; x++)
+                    {
+                        Tile tile = map.Enemy[i].Vision[x];
+                        if (tile is Hero)
+                        {
+                            Hero hero = (Hero)tile;
+                            map.Enemy[i].Attack(hero);
+                        }
+                    }
+                }
+                
+               
+            }
             
         }
 
