@@ -32,6 +32,7 @@ namespace Gade6122_Part1_corrected
             this.lblMap = new System.Windows.Forms.Label();
             this.lblAttackInfo = new System.Windows.Forms.Label();
             this.lblHeroStats = new System.Windows.Forms.Label();
+            this.lblBtnInfo = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblMap
@@ -52,7 +53,7 @@ namespace Gade6122_Part1_corrected
             this.lblAttackInfo.AutoSize = true;
             this.lblAttackInfo.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblAttackInfo.ForeColor = System.Drawing.Color.Red;
-            this.lblAttackInfo.Location = new System.Drawing.Point(345, 384);
+            this.lblAttackInfo.Location = new System.Drawing.Point(324, 380);
             this.lblAttackInfo.Name = "lblAttackInfo";
             this.lblAttackInfo.Size = new System.Drawing.Size(128, 15);
             this.lblAttackInfo.TabIndex = 1;
@@ -71,12 +72,25 @@ namespace Gade6122_Part1_corrected
             this.lblHeroStats.Text = "(hero stats go here)";
             this.lblHeroStats.Click += new System.EventHandler(this.lblHeroStats_Click);
             // 
+            // lblBtnInfo
+            // 
+            this.lblBtnInfo.AutoSize = true;
+            this.lblBtnInfo.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblBtnInfo.ForeColor = System.Drawing.Color.Red;
+            this.lblBtnInfo.Location = new System.Drawing.Point(596, 278);
+            this.lblBtnInfo.Name = "lblBtnInfo";
+            this.lblBtnInfo.Size = new System.Drawing.Size(130, 15);
+            this.lblBtnInfo.TabIndex = 3;
+            this.lblBtnInfo.Text = "(button info goes here)";
+            this.lblBtnInfo.UseMnemonic = false;
+            // 
             // frm1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblBtnInfo);
             this.Controls.Add(this.lblHeroStats);
             this.Controls.Add(this.lblAttackInfo);
             this.Controls.Add(this.lblMap);
@@ -94,6 +108,7 @@ namespace Gade6122_Part1_corrected
         private System.Windows.Forms.Label lblMap;
         private System.Windows.Forms.Label lblAttackInfo;
         private System.Windows.Forms.Label lblHeroStats;
+        private System.Windows.Forms.Label lblBtnInfo;
     }
 }
 

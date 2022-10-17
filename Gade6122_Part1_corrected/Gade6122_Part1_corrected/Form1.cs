@@ -21,7 +21,15 @@ namespace Gade6122_Part1_corrected
             lblMap.Text = gameEngine.Display;
             UpdateDisplay();
             lblAttackInfo.Text = attackInfo;
-            
+            lblBtnInfo.Text = "WASD - moves Hero \n" + //additional information such as controls and what the letters represent
+                "IJKL - Hero attacks \n" +
+                "\n" +
+                "H - Hero \n" +
+                "S - SwampCreature \n" +
+                "M - Mage \n" +
+                "G - Gold";
+
+
         }
         public string attackInfo = "";
 
@@ -34,43 +42,50 @@ namespace Gade6122_Part1_corrected
         {
             CheckMove(e.KeyCode);
             CheckAttack(e.KeyCode);
-            
+            //updates display after every keypress
             UpdateDisplay();
         }
-        private void CheckMove(Keys keyCode)
+        private void CheckMove(Keys keyCode) //method for moving the character using keys on the keyboard
         {
-            Debug.WriteLine(keyCode);
+            Debug.WriteLine(keyCode); //writes the key clicked into the debug console
             //updatemap() updates vision as well
             gameEngine.map.UpdateMap();
             if (keyCode == Keys.W)
             {
+                //moves character, enemies and also makes the enemy attack. The map and vision arrays are updated
                 gameEngine.MovePlayer(Movement.Up);
                 gameEngine.map.MoveEnemies();
+                gameEngine.map.UpdateMap();
                 gameEngine.EnemyAttacks();
             }
             else if (keyCode == Keys.S)
             {
                 gameEngine.MovePlayer(Movement.Down);
                 gameEngine.map.MoveEnemies();
+                gameEngine.map.UpdateMap();
                 gameEngine.EnemyAttacks();
             }
             else if (keyCode == Keys.D)
             {
                 gameEngine.MovePlayer(Movement.Right);
                 gameEngine.map.MoveEnemies();
+                gameEngine.map.UpdateMap();
                 gameEngine.EnemyAttacks();
             }
             else if (keyCode == Keys.A)
             {
                 gameEngine.MovePlayer(Movement.Left);
                 gameEngine.map.MoveEnemies();
+                gameEngine.map.UpdateMap();
                 gameEngine.EnemyAttacks();
             }
             
         }
         private void CheckAttack(Keys keyCode)
         {
-            
+            //method that makes the character attack and correctly damages and kills enemies in range.
+            //enemies also attack after the player attacks
+            //the attacking information is displayed in a label on the form
             Debug.WriteLine(keyCode);
             gameEngine.map.UpdateMap();
             if (keyCode == Keys.I)
@@ -108,7 +123,7 @@ namespace Gade6122_Part1_corrected
         {
 
         }
-        private void UpdateDisplay()
+        private void UpdateDisplay() //updates hero stats and map
         {
             lblHeroStats.Text = gameEngine.HeroStats;
             lblMap.Text = gameEngine.Display;
