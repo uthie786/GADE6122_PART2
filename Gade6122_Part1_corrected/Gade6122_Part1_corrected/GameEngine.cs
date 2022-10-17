@@ -53,9 +53,13 @@ namespace Gade6122_Part1_corrected
             {
                 Enemy enemy = (Enemy)tile;
                 map.Hero.Attack(enemy);
-               
+               if (enemy.IsDead)
+                {
+                    return "Hero killed " + enemy.ToString();
+                }
                 return "Hero attacked: " + enemy.ToString();
             }
+            
             return "Attack Failed, no enemy in this direction"; 
         }
         public void EnemyAttacks()
@@ -83,6 +87,11 @@ namespace Gade6122_Part1_corrected
                         {
                             Hero hero = (Hero)tile;
                             map.Enemy[i].Attack(hero);
+                        }
+                        if (tile is SwampCreature)
+                        {
+                            swampCreature = (SwampCreature)tile;
+                           map.Enemy[i].Attack(swampCreature);
                         }
                     }
                 }

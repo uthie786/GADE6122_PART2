@@ -52,7 +52,7 @@ namespace Gade6122_Part1_corrected
             this.lblAttackInfo.AutoSize = true;
             this.lblAttackInfo.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblAttackInfo.ForeColor = System.Drawing.Color.Red;
-            this.lblAttackInfo.Location = new System.Drawing.Point(567, 138);
+            this.lblAttackInfo.Location = new System.Drawing.Point(345, 384);
             this.lblAttackInfo.Name = "lblAttackInfo";
             this.lblAttackInfo.Size = new System.Drawing.Size(128, 15);
             this.lblAttackInfo.TabIndex = 1;
@@ -64,7 +64,7 @@ namespace Gade6122_Part1_corrected
             this.lblHeroStats.AutoSize = true;
             this.lblHeroStats.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblHeroStats.ForeColor = System.Drawing.Color.Red;
-            this.lblHeroStats.Location = new System.Drawing.Point(567, 42);
+            this.lblHeroStats.Location = new System.Drawing.Point(596, 35);
             this.lblHeroStats.Name = "lblHeroStats";
             this.lblHeroStats.Size = new System.Drawing.Size(113, 15);
             this.lblHeroStats.TabIndex = 2;

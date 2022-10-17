@@ -20,7 +20,10 @@ namespace Gade6122_Part1_corrected
             gameEngine = new GameEngine();
             lblMap.Text = gameEngine.Display;
             UpdateDisplay();
+            lblAttackInfo.Text = attackInfo;
+            
         }
+        public string attackInfo = "";
 
         private void lblMap_Click(object sender, EventArgs e)
         {
@@ -31,12 +34,14 @@ namespace Gade6122_Part1_corrected
         {
             CheckMove(e.KeyCode);
             CheckAttack(e.KeyCode);
-            lblAttackInfo.Text = "";
+            
             UpdateDisplay();
         }
         private void CheckMove(Keys keyCode)
         {
             Debug.WriteLine(keyCode);
+            //updatemap() updates vision as well
+            gameEngine.map.UpdateMap();
             if (keyCode == Keys.W)
             {
                 gameEngine.MovePlayer(Movement.Up);
@@ -65,8 +70,9 @@ namespace Gade6122_Part1_corrected
         }
         private void CheckAttack(Keys keyCode)
         {
-            string attackInfo = "";
+            
             Debug.WriteLine(keyCode);
+            gameEngine.map.UpdateMap();
             if (keyCode == Keys.I)
             {
                 attackInfo = gameEngine.PlayerAttack(Movement.Up);
@@ -87,7 +93,7 @@ namespace Gade6122_Part1_corrected
                 attackInfo = gameEngine.PlayerAttack(Movement.Left);
                 gameEngine.EnemyAttacks();
             }
-            if (attackInfo != "")
+            if (attackInfo != null)
             {
                 lblAttackInfo.Text = attackInfo;
             }

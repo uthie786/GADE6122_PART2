@@ -16,7 +16,7 @@ namespace Gade6122_Part1_corrected
         }
         public override string ToString()
         {
-            return GetType().Name + "at [" + x + ", " + y + "] (" + damage + "DMG)"; 
+            return GetType().Name + " at [" + x + ", " + y + "] (" + damage + "dmg)"; 
         }
     }
 }
