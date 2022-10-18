@@ -17,7 +17,6 @@ namespace Gade6122_Part1_corrected
         {
             get { return map.Hero.ToString(); }
         }
-
         public GameEngine()
         {
             map = new Map(10, 20, 10, 20, 8, 4);
@@ -39,25 +38,10 @@ namespace Gade6122_Part1_corrected
                 map.Hero.PickUp(item);
             }
 
-            map.Hero.Move(validMove);           
+            map.Hero.Move(validMove);
             map.UpdateMap();
             return true;
         }
-        public string ShowEnemyStats(Movement direction)
-        {
-            if (direction == Movement.NoMovemnt)
-            {
-                return string.Empty;
-            }
-            Tile tile = map.Hero.Vision[(int)direction];
-            if (!(tile is Enemy))
-            {
-                return string.Empty;                            
-            }
-            Enemy enemy = (Enemy)tile;
-            return $"Enemy stats:\n HP = {enemy.HP}\n Damage = {enemy.Damage} \n Coordinates = ({enemy.X}, {enemy.Y})";
-        }
-
         public string PlayerAttack(Movement direction)
         {
             if (direction == Movement.NoMovemnt)
@@ -75,7 +59,6 @@ namespace Gade6122_Part1_corrected
                 }
                 return "Hero attacked: " + enemy.ToString();
             }
-
             
             return "Attack Failed, no enemy in this direction"; 
         }

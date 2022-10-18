@@ -44,30 +44,26 @@ namespace Gade6122_Part1_corrected
             gameEngine.map.UpdateMap();
             if (keyCode == Keys.W)
             {
-                gameEngine.MovePlayer(Movement.Up);               
+                gameEngine.MovePlayer(Movement.Up);
                 gameEngine.map.MoveEnemies();
-                UpdateEnemyDisplay(Movement.Up);
                 gameEngine.EnemyAttacks();
             }
             else if (keyCode == Keys.S)
             {
                 gameEngine.MovePlayer(Movement.Down);
                 gameEngine.map.MoveEnemies();
-                UpdateEnemyDisplay(Movement.Down);
                 gameEngine.EnemyAttacks();
             }
             else if (keyCode == Keys.D)
             {
                 gameEngine.MovePlayer(Movement.Right);
                 gameEngine.map.MoveEnemies();
-                UpdateEnemyDisplay(Movement.Right);
                 gameEngine.EnemyAttacks();
             }
             else if (keyCode == Keys.A)
             {
                 gameEngine.MovePlayer(Movement.Left);
                 gameEngine.map.MoveEnemies();
-                UpdateEnemyDisplay(Movement.Left);
                 gameEngine.EnemyAttacks();
             }
             
@@ -80,25 +76,21 @@ namespace Gade6122_Part1_corrected
             if (keyCode == Keys.I)
             {
                 attackInfo = gameEngine.PlayerAttack(Movement.Up);
-                UpdateEnemyDisplay(Movement.Up);
                 gameEngine.EnemyAttacks();
             }
             else if (keyCode == Keys.K)
             {
                 attackInfo = gameEngine.PlayerAttack(Movement.Down);
-                UpdateEnemyDisplay(Movement.Down);
                 gameEngine.EnemyAttacks();
             }
             else if (keyCode == Keys.L)
             {
                 attackInfo = gameEngine.PlayerAttack(Movement.Right);
-                UpdateEnemyDisplay(Movement.Right);
                 gameEngine.EnemyAttacks();
             }
             else if (keyCode == Keys.J)
             {
                 attackInfo = gameEngine.PlayerAttack(Movement.Left);
-                UpdateEnemyDisplay(Movement.Left);
                 gameEngine.EnemyAttacks();
             }
             if (attackInfo != null)
@@ -120,16 +112,6 @@ namespace Gade6122_Part1_corrected
         {
             lblHeroStats.Text = gameEngine.HeroStats;
             lblMap.Text = gameEngine.Display;
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void UpdateEnemyDisplay(Movement direction)
-        {
-            lblEnemyStats.Text = gameEngine.ShowEnemyStats(direction);
         }
     }
 }

@@ -32,7 +32,6 @@ namespace Gade6122_Part1_corrected
             this.lblMap = new System.Windows.Forms.Label();
             this.lblAttackInfo = new System.Windows.Forms.Label();
             this.lblHeroStats = new System.Windows.Forms.Label();
-            this.lblEnemyStats = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblMap
@@ -72,24 +71,12 @@ namespace Gade6122_Part1_corrected
             this.lblHeroStats.Text = "(hero stats go here)";
             this.lblHeroStats.Click += new System.EventHandler(this.lblHeroStats_Click);
             // 
-            // lblEnemyStats
-            // 
-            this.lblEnemyStats.AutoSize = true;
-            this.lblEnemyStats.ForeColor = System.Drawing.Color.Red;
-            this.lblEnemyStats.Location = new System.Drawing.Point(596, 191);
-            this.lblEnemyStats.Name = "lblEnemyStats";
-            this.lblEnemyStats.Size = new System.Drawing.Size(125, 15);
-            this.lblEnemyStats.TabIndex = 3;
-            this.lblEnemyStats.Text = "(enemy stats go here)";
-            this.lblEnemyStats.Click += new System.EventHandler(this.label1_Click);
-            // 
             // frm1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.lblEnemyStats);
             this.Controls.Add(this.lblHeroStats);
             this.Controls.Add(this.lblAttackInfo);
             this.Controls.Add(this.lblMap);
@@ -107,7 +94,6 @@ namespace Gade6122_Part1_corrected
         private System.Windows.Forms.Label lblMap;
         private System.Windows.Forms.Label lblAttackInfo;
         private System.Windows.Forms.Label lblHeroStats;
-        private System.Windows.Forms.Label lblEnemyStats;
     }
 }
 

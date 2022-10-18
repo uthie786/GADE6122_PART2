@@ -18,7 +18,5 @@ namespace Gade6122_Part1_corrected
         {
             return GetType().Name + " at [" + x + ", " + y + "] (" + damage + "dmg)"; 
         }
-
-        
     }
 }

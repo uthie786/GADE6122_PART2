@@ -1,10 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "//73zoh6CU44+0akXEo1iXY1VIwTIRRlGJcGsgIQcaYfjrFjBU6qKzz3jHv41xwh2wxxlJTUMumdC36Gq569CA==",
+  "dgSpecHash": "lbMoMKBoRfq21ZqzoycFFIYAm+ICd4ErtkLGcLjsp5nlHJjWksnGRgx9Qa6Ul3HbpNP+WddzrUH7eBWfygMIng==",
   "success": true,
   "projectFilePath": "C:\\Users\\kylel\\OneDrive\\Desktop\\GitHub\\Part1_Assignment_GADE6122\\Part1_Assignment_GADE6122\\GADE6122_PART2\\Gade6122_Part1_corrected\\Gade6122_Part1_corrected\\Gade6122_Part1_corrected.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\kylel\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
-  ],
+  "expectedPackageFiles": [],
   "logs": []
 }
