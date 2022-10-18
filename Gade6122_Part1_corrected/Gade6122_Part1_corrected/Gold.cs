@@ -4,17 +4,17 @@ using System.Text;
 
 namespace Gade6122_Part1_corrected
 {
-    public class Gold : Item
+    public class Gold : Item //inherits from the item class
     {
-        private int goldAmount;
-        private Random random = new Random();
-        
+        private int goldAmount; //amount of gold represented by a gold drop 
+        private Random random = new Random(); //randomises gold amounts
+
         public Gold(int x,int y) : base(x, y)
         {
-            GoldAmount = random.Next(0, 6);
+            GoldAmount = random.Next(0, 6); //sets the amount to a random amount between 1 and 5
         }
 
-        public int GoldAmount
+        public int GoldAmount //public accessor that can return that amount
         {
             get { return goldAmount; }
             set { goldAmount = value; }

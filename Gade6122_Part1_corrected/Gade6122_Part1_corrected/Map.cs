@@ -88,7 +88,7 @@ namespace Gade6122_Part1_corrected
             {
                 map[tileX, tileY] = new Gold(tileX, tileY);
             }
-            else if (type == TileType.Enemy)
+            else if (type == TileType.Enemy) //randomises between Swamp Creatures and Mages
             {
                 int enemyType = random.Next(2);
                 if (enemyType == 0)
@@ -172,7 +172,7 @@ namespace Gade6122_Part1_corrected
         {
             for (int i = 0; i < items.Length; i++)
             {
-                if (items[i].X == x && items[i].Y == y)
+                if (items[i]!= null && items[i].X == x && items[i].Y == y)
                 {
                     Item selectedItem = items[i];
                     items[i] = null;

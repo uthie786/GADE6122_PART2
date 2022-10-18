@@ -116,7 +116,7 @@ namespace Gade6122_Part1_corrected
         {
 
         }
-        private void UpdateDisplay()
+        private void UpdateDisplay() //updates hero stats and map
         {
             lblHeroStats.Text = gameEngine.HeroStats;
             lblMap.Text = gameEngine.Display;

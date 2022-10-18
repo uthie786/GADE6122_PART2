@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Gade6122_Part1_corrected
 {
-    public enum Movement 
+    public enum Movement //enum for every movement direction and a no movement option
     { 
         Up,
         Right,
@@ -15,33 +15,34 @@ namespace Gade6122_Part1_corrected
 
     public abstract class Character : Tile
     {
+       //protected variables for the characters
         protected int hp;
         protected int maxHp;
         protected int damage;
         private int purse;
-        protected Tile[] vision;
+        protected Tile[] vision; //vision array thats used to checks tiles around a character
 
         public int HP { get { return hp; } }
         public int MaxHP { get { return maxHp; } }
         public int Damage { get { return damage; } }
         public Tile[] Vision { get { return vision; } }
 
-        public bool IsDead
+        public bool IsDead //method that checks a characters HP and returns a boolean
         {
             get { return hp <= 0; }
         }
-       public int Purse
+       public int Purse //Purse used for storing gold
         {
             get { return purse; }
             set { purse = value; }
 
         }
 
-        public Character(int x, int y) : base(x, y)
+        public Character(int x, int y) : base(x, y) //character constructor
         {
             vision = new Tile[8];
         }
-        public virtual void Attack(Character target)
+        public virtual void Attack(Character target) //method used by characters to attack other characters by reducing their HP
         {
             target.hp -= damage;
             if(target.hp < 0)
@@ -50,7 +51,7 @@ namespace Gade6122_Part1_corrected
             }
         }
 
-        public virtual bool CheckRange(Character target)
+        public virtual bool CheckRange(Character target) //checks distance between two characters
         {
             return DistanceTo(target) <= 1;
         }
@@ -69,7 +70,7 @@ namespace Gade6122_Part1_corrected
             }    
         }
 
-        public void UpdateVision(Tile[,] map)
+        public void UpdateVision(Tile[,] map) //method that updates the vision array for a character
         {
             //up
             vision[0] = y - 1 >= 0 ? map[x, y - 1] : null;
@@ -93,16 +94,16 @@ namespace Gade6122_Part1_corrected
 
         public abstract override string ToString();
         
-        private int DistanceTo(Tile target)
+        private int DistanceTo(Tile target) //calculates the distance between two tiles
         {
             int xDist = Math.Abs(target.X - x);
             int yDist = Math.Abs(target.Y - y);
             return xDist + yDist;
         }
 
-        public void PickUp(Item item)
+        public void PickUp(Item item) //method that lets a character pick up gold and store in purse
         {
-            if (item.GetType() == typeof(Gold))
+            if (item is Gold)
             {
                 int goldAmount = ((Gold)item).GoldAmount;
                 Purse += goldAmount;

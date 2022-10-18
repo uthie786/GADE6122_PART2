@@ -10,11 +10,11 @@ namespace Gade6122_Part1_corrected
         {
 
         }
-        public override Movement ReturnMove(Movement move) //not too sure about this
+        public override Movement ReturnMove(Movement move) //this method always returns a 0, as a Mage never moves
         {
             return Movement.NoMovemnt;
         }
-        public override bool CheckRange(Character target)
+        public override bool CheckRange(Character target) //mages attack all characters around them in a one block radius
         {
             return base.CheckRange(target);
         }

@@ -20,7 +20,7 @@ namespace Gade6122_Part1_corrected
             {
                 return move;
             }
-            if (vision[(int)move] is EmptyTile)
+            if (vision[(int)move] is EmptyTile || vision[(int)move] is Gold)
             {
                 return move;
             }
