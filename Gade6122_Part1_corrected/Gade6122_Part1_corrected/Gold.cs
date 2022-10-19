@@ -4,10 +4,11 @@ using System.Text;
 
 namespace Gade6122_Part1_corrected
 {
+    [Serializable]
     public class Gold : Item //inherits from the item class
     {
         private int goldAmount; //amount of gold represented by a gold drop 
-        private Random random = new Random(); //randomises gold amounts
+        [NonSerialized] private Random random = new Random(); //randomises gold amounts
 
         public Gold(int x,int y) : base(x, y)
         {

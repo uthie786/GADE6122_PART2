@@ -64,3 +64,5 @@ C:\Users\kylel\OneDrive\Desktop\GitHub\Part1_Assignment_GADE6122\Part1_Assignmen
 C:\Users\Uthmaan\Desktop\Github\GADE6122_PART2\Gade6122_Part1_corrected\Gade6122_Part1_corrected\obj\Debug\netcoreapp3.1\Gade6122_Part1_corrected.frm1.resources
 C:\Users\kylel\OneDrive\Desktop\GitHub\Part1_Assignment_GADE6122\Part1_Assignment_GADE6122\GADE6122_PART2\Gade6122_Part1_corrected\Gade6122_Part1_corrected\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
 C:\Users\kylel\OneDrive\Desktop\GitHub\Part1_Assignment_GADE6122\Part1_Assignment_GADE6122\GADE6122_PART2\Gade6122_Part1_corrected\Gade6122_Part1_corrected\obj\Debug\netcoreapp3.1\Gade6122_Part1_corrected.csproj.CopyComplete
+C:\Users\Uthmaan\Desktop\Github\GADE6122_PART2\Gade6122_Part1_corrected\Gade6122_Part1_corrected\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\Uthmaan\Desktop\Github\GADE6122_PART2\Gade6122_Part1_corrected\Gade6122_Part1_corrected\obj\Debug\netcoreapp3.1\Gade6122_Part1_corrected.csproj.CopyComplete

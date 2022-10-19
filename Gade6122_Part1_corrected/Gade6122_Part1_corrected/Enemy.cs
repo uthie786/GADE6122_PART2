@@ -4,9 +4,11 @@ using System.Text;
 
 namespace Gade6122_Part1_corrected
 {
+    [Serializable]
     public abstract class Enemy : Character
     {
-        protected Random random = new Random();
+       [NonSerialized] protected Random random = new Random();
+       
         public Enemy(int x, int y, int damage, int hp) : base(x, y) //constructor for enemy class
         {
             this.damage = damage;

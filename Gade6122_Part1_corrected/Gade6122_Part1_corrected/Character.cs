@@ -4,6 +4,7 @@ using System.Text;
 
 namespace Gade6122_Part1_corrected
 {
+    [Serializable]
     public enum Movement //enum for every movement direction and a no movement option
     { 
         Up,
@@ -12,7 +13,7 @@ namespace Gade6122_Part1_corrected
         Left,
         NoMovemnt
     }
-
+    [Serializable]
     public abstract class Character : Tile
     {
        //protected variables for the characters

@@ -4,7 +4,8 @@ using System.Text;
 
 namespace Gade6122_Part1_corrected
 {
-    internal class Mage : Enemy
+    [Serializable]
+    public class Mage : Enemy
     {
         public Mage(int x, int y): base(x, y, 5, 5)
         {

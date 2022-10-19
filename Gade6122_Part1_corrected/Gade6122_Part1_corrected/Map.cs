@@ -4,6 +4,7 @@ using System.Text;
 
 namespace Gade6122_Part1_corrected
 {
+    [Serializable]
     public class Map
     {
         private Tile[,] map;
@@ -12,7 +13,7 @@ namespace Gade6122_Part1_corrected
         public Item[] items;
         private int width;
         private int height;
-        private Random random;
+        [NonSerialized] private Random random;
         public Hero Hero 
         { 
             get { return hero; }
@@ -63,7 +64,10 @@ namespace Gade6122_Part1_corrected
             }
             foreach (Item item in items)
             {
-                map[item.X, item.Y] = item;
+                if (item != null)
+                {
+                    map[item.X, item.Y] = item;
+                }
             }
             //place hero last so its not overwritten
             map[hero.X, hero.Y] = hero;
@@ -145,6 +149,7 @@ namespace Gade6122_Part1_corrected
                         
                         if (((Enemy)tile).IsDead)
                         {
+                            tile = new EmptyTile(tile.X, tile.Y);
                             s += '†';                           
                         }                       
                         else s += "S";
@@ -153,6 +158,7 @@ namespace Gade6122_Part1_corrected
                     {
                         if (((Enemy)tile).IsDead)
                         {
+                            tile = new EmptyTile(tile.X, tile.Y);
                             s += '†';
                         }
                         else s += "M";
@@ -216,8 +222,8 @@ namespace Gade6122_Part1_corrected
                        enemies[i].Move((Movement)Movement.Right);
                     }
 
+                    enemies[i].UpdateVision(map);
 
-                   
 
                 }
 

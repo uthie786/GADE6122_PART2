@@ -1,13 +1,18 @@
 ﻿using System;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.Runtime.Serialization;
 using System.Collections.Generic;
 using System.Text;
 
 namespace Gade6122_Part1_corrected
 {
+    [Serializable]
     public class GameEngine
     {
         public Map map;
         public SwampCreature swampCreature;
+        const string SERIALIZED_GAME_SAVE = "SwampGameSave.gdf";
         
         public string Display
         {
@@ -37,6 +42,7 @@ namespace Gade6122_Part1_corrected
             if (item is Gold)
             {
                 map.Hero.PickUp(item);
+                map.UpdateMap();
             }
 
             map.Hero.Move(validMove);           
@@ -71,7 +77,10 @@ namespace Gade6122_Part1_corrected
                 map.Hero.Attack(enemy);
                if (enemy.IsDead)
                 {
+                   
                     return "Hero killed " + enemy.ToString();
+                   
+                    
                 }
                 return "Hero attacked: " + enemy.ToString();
             }
@@ -81,6 +90,7 @@ namespace Gade6122_Part1_corrected
         }
         public void EnemyAttacks()
         {
+            map.UpdateMap();
             for (int i = 0; i < map.Enemy.Length; i++)
             {
                 if (map.Enemy[i] is SwampCreature && map.Enemy[i].IsDead == false)
@@ -116,6 +126,20 @@ namespace Gade6122_Part1_corrected
                
             }
             
+        }
+        public void Save()
+        {
+            FileStream stream = new FileStream(SERIALIZED_GAME_SAVE, FileMode.Create, FileAccess.Write);
+            BinaryFormatter bf = new BinaryFormatter();
+            bf.Serialize(stream, map);
+            stream.Close();
+        }
+        public void Load()
+        {
+            FileStream stream = new FileStream(SERIALIZED_GAME_SAVE, FileMode.Open, FileAccess.Read);
+            BinaryFormatter bf = new BinaryFormatter();
+            map = (Map)bf.Deserialize(stream);
+            stream.Close();
         }
 
 

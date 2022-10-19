@@ -6,6 +6,7 @@ using System.Windows.Forms;
 
 namespace Gade6122_Part1_corrected
 {
+    [Serializable]
     static class Program
     {
         /// <summary>

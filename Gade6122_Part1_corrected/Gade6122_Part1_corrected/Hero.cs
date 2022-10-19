@@ -4,6 +4,7 @@ using System.Text;
 
 namespace Gade6122_Part1_corrected
 {
+    [Serializable]
     public class Hero : Character
     {
         public Hero(int x, int y, int hp) : base(x,y)
