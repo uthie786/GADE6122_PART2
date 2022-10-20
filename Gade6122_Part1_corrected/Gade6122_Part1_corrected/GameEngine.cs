@@ -10,46 +10,51 @@ namespace Gade6122_Part1_corrected
     [Serializable]
     public class GameEngine
     {
+        
         public Map map;
         public SwampCreature swampCreature;
         const string SERIALIZED_GAME_SAVE = "SwampGameSave.gdf";
         
-        public string Display
+        public string Display //creates a string that outputs the map
         {
             get { return map.ToString(); }
         }
-        public string HeroStats
+        public string HeroStats //prints out the hero stats
         {
             get { return map.Hero.ToString(); }
         }
 
         public GameEngine()
-        {
+        { //creating the size of the map
             map = new Map(10, 20, 10, 20, 8, 4);
         }
-        public bool MovePlayer(Movement direction)
+        public bool MovePlayer(Movement direction) //mehtod that moves the player if a move is valid
         {
-            if (direction == Movement.NoMovemnt)
-            {
-                return false;
-            }
             Movement validMove = map.Hero.ReturnMove(direction);
-            if (validMove == Movement.NoMovemnt)
+            if (!map.Hero.IsDead)
             {
-                return false;
+                if (direction == Movement.NoMovemnt)
+                {
+                    return false;
+                }
+               
+                if (validMove == Movement.NoMovemnt)
+                {
+                    return false;
+                }
+                Item item = map.GetItemAtPoisition(map.Hero.X, map.Hero.Y); //if the hero moves onto an item the hero picks up that item
+                if (item is Gold)
+                {
+                    map.Hero.PickUp(item);
+                    map.UpdateMap();
+                }
             }
-            Item item = map.GetItemAtPoisition(map.Hero.X, map.Hero.Y);
-            if (item is Gold)
-            {
-                map.Hero.PickUp(item);
-                map.UpdateMap();
-            }
-
+            //hero moves and map is updated
             map.Hero.Move(validMove);           
             map.UpdateMap();
             return true;
         }
-        public string ShowEnemyStats(Movement direction)
+        public string ShowEnemyStats(Movement direction) //method that displays the stats of the enemy the hero is facing or attacking
         {
             if (direction == Movement.NoMovemnt)
             {
@@ -64,33 +69,37 @@ namespace Gade6122_Part1_corrected
             return $"Enemy stats:\n HP = {enemy.HP}\n Damage = {enemy.Damage} \n Coordinates = ({enemy.X}, {enemy.Y})";
         }
 
-        public string PlayerAttack(Movement direction)
+        public string PlayerAttack(Movement direction) //method that lets the hero attack in a specific direction
         {
-            if (direction == Movement.NoMovemnt)
-            {
-                return "Attack Failed!";
-            }
             Tile tile = map.Hero.Vision[(int)direction];
-            if (tile is Enemy)
+            if (!map.Hero.IsDead)
             {
-                Enemy enemy = (Enemy)tile;
-                map.Hero.Attack(enemy);
-               if (enemy.IsDead)
+                if (direction == Movement.NoMovemnt)
                 {
-                   
-                    return "Hero killed " + enemy.ToString();
-                   
-                    
+                    return "Attack Failed!";
                 }
-                return "Hero attacked: " + enemy.ToString();
+
+                if (tile is Enemy)
+                {
+                    Enemy enemy = (Enemy)tile;
+                    map.Hero.Attack(enemy);
+                    if (enemy.IsDead)
+                    {
+                        //the attack is output into a label
+                        return "Hero killed " + enemy.ToString();
+
+
+                    }
+                    return "Hero attacked: " + enemy.ToString();
+                }
             }
 
             
             return "Attack Failed, no enemy in this direction"; 
         }
-        public void EnemyAttacks()
+        public void EnemyAttacks() //method that lets enemies attack each other and the hero
         {
-            map.UpdateMap();
+            map.UpdateMap(); //updates map first so enemies can attack correctly
             for (int i = 0; i < map.Enemy.Length; i++)
             {
                 if (map.Enemy[i] is SwampCreature && map.Enemy[i].IsDead == false)
@@ -105,7 +114,7 @@ namespace Gade6122_Part1_corrected
                         }
                     }
                 }
-                else if (map.Enemy[i] is Mage && map.Enemy[i].IsDead == false)
+                else if (map.Enemy[i] is Mage && map.Enemy[i].IsDead == false) //mages are able to friendly fire on swampcreatures
                 {
                     for (int x = 0; x < 8; x++)
                     {
@@ -127,14 +136,14 @@ namespace Gade6122_Part1_corrected
             }
             
         }
-        public void Save()
+        public void Save() //saves the map by writing it to a binary file
         {
             FileStream stream = new FileStream(SERIALIZED_GAME_SAVE, FileMode.Create, FileAccess.Write);
             BinaryFormatter bf = new BinaryFormatter();
             bf.Serialize(stream, map);
             stream.Close();
         }
-        public void Load()
+        public void Load()//reads the binary file and outputs back into the map
         {
             FileStream stream = new FileStream(SERIALIZED_GAME_SAVE, FileMode.Open, FileAccess.Read);
             BinaryFormatter bf = new BinaryFormatter();

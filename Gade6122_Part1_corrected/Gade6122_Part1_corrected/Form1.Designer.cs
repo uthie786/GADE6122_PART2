@@ -43,7 +43,7 @@ namespace Gade6122_Part1_corrected
             this.lblMap.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblMap.Font = new System.Drawing.Font("Courier New", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblMap.ForeColor = System.Drawing.Color.Red;
-            this.lblMap.Location = new System.Drawing.Point(95, 60);
+            this.lblMap.Location = new System.Drawing.Point(25, 32);
             this.lblMap.Name = "lblMap";
             this.lblMap.Size = new System.Drawing.Size(175, 21);
             this.lblMap.TabIndex = 0;

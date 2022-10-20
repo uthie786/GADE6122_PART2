@@ -5,7 +5,7 @@ using System.Text;
 namespace Gade6122_Part1_corrected
 {
     [Serializable]
-    public class Hero : Character
+    public class Hero : Character //Hero character
     {
         public Hero(int x, int y, int hp) : base(x,y)
         {
@@ -28,7 +28,7 @@ namespace Gade6122_Part1_corrected
             
             return Movement.NoMovemnt;
         }
-        public override string ToString()
+        public override string ToString() //tostring method thats used to print the Hero stats
         {
             return $"Player stats: \n" +
                 $"HP: {hp}/{maxHp}\n" +

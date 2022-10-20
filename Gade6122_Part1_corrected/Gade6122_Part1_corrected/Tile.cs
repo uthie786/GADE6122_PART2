@@ -5,7 +5,7 @@ using System.Text;
 namespace Gade6122_Part1_corrected
 {
     [Serializable]
-    public enum TileType
+    public enum TileType //enum for the different tile types
     {
         Hero,
         Enemy,
@@ -14,8 +14,9 @@ namespace Gade6122_Part1_corrected
         None
     }
     [Serializable]
-    public abstract class Tile
+    public abstract class Tile //tile class
     {
+        //variables for coordinates and type
         protected int x;
         protected int y;
         protected TileType type;
@@ -34,7 +35,7 @@ namespace Gade6122_Part1_corrected
             get { return y; }
         }
 
-        public Tile(int x, int y)
+        public Tile(int x, int y) //constructor
         {
             this.x = x;
             this.y = y;

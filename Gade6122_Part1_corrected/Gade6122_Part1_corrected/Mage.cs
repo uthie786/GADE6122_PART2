@@ -5,7 +5,7 @@ using System.Text;
 namespace Gade6122_Part1_corrected
 {
     [Serializable]
-    public class Mage : Enemy
+    public class Mage : Enemy //mage class inherits from Enemy
     {
         public Mage(int x, int y): base(x, y, 5, 5)
         {

@@ -5,9 +5,9 @@ using System.Text;
 namespace Gade6122_Part1_corrected
 {
     [Serializable]
-    public abstract class Enemy : Character
+    public abstract class Enemy : Character //Enemy character
     {
-       [NonSerialized] protected Random random = new Random();
+       protected static Random random = new Random();
        
         public Enemy(int x, int y, int damage, int hp) : base(x, y) //constructor for enemy class
         {
